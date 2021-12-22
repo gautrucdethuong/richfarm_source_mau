@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/teacher_places"
+       >
+        <include layout="@layout/back_header"
+            android:id="@+id/header"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lv_places"
+                android:layout_marginBottom="10dp"
+                android:smoothScrollbar="true">
+
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

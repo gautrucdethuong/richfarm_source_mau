@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:focusable="true"
+    android:clickable="true"
+    android:layout_marginTop="5dp"
+
+    >
+    <TextView
+        android:id="@+id/tv_noclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/noclass"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+
+        android:drawableTop="@mipmap/ic_alert_grey600_24dp"
+        android:drawableTint="@color/colorPrimary"/>
+    <EditText
+        android:id="@+id/sv_listener"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search Appointments"
+android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="17dp"
+        android:singleLine="true"
+        android:drawableRight="@mipmap/sr"
+        android:drawablePadding="5dp"
+        android:visibility="gone"
+        android:background="@drawable/rund_corner_edittext"/>
+    <ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recycleview"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+    android:divider="@null"
+    android:dividerHeight="0dp"
+    android:layout_below="@+id/sv_listener">
+</ListView>
+</RelativeLayout>
+    </layout>

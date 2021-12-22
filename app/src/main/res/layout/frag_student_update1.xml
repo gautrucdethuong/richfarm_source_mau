@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/personal_reg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/rel_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/top_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="-260dp"
+                    android:layout_marginTop="-55dp"
+                    android:layout_marginRight="100dp"
+                    android:src="@drawable/top_img" />
+
+                <ImageView
+                    android:id="@+id/im_back"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/ic_arrow_left_white_24dp"
+                    android:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+
+                    android:gravity="center"
+                    android:text="Next"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/top_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Home"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_second"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/rel_first"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="-150dp"
+                android:layout_marginRight="-30dp"
+
+                >
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/background_cross" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_first"
+                android:layout_marginTop="-90dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/im_pic"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/noimage"
+                    app:civ_border_color="#bce7e5"
+                    app:civ_border_width="7dp" />
+
+                <ImageView
+                    android:id="@+id/im_camera"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/im_pic"
+                    android:layout_marginLeft="-45dp"
+                    android:layout_toRightOf="@+id/im_pic"
+                    android:src="@mipmap/camera" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:id="@+id/im_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="-50dp"
+                    android:layout_marginRight="-100dp"
+                    android:layout_marginBottom="-8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bottom_img_dark" />
+
+
+                <ImageView
+                    android:id="@+id/im_bottom_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="-80dp"
+                    android:layout_marginRight="-100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bottom_img_light" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_second"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/recangle_shape_purple">
+
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/fullname_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_show_signup"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            app:boxCornerRadiusBottomEnd="50dp"
+                            app:boxCornerRadiusBottomStart="50dp"
+                            app:boxCornerRadiusTopEnd="50dp"
+                            app:boxCornerRadiusTopStart="50dp">
+
+                            <EditText
+                                android:id="@+id/et_fullname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:drawableLeft="@mipmap/ic_account_outline_grey600_24dp"
+                                android:drawablePadding="10dp"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/fullname"
+                                android:inputType="text"
+                                android:maxLength="30"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <!--                        <View-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="1dp"-->
+                            <!--                            android:background="@color/yellow"-->
+                            <!--                            android:layout_marginTop="5dp"/>-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/phone_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fullname_layout"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:boxCornerRadiusBottomEnd="50dp"
+                            app:boxCornerRadiusBottomStart="50dp"
+                            app:boxCornerRadiusTopEnd="50dp"
+                            app:boxCornerRadiusTopStart="50dp">
+
+                            <EditText
+                                android:id="@+id/et_phone"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:digits="0123456789"
+                                android:drawableLeft="@mipmap/ic_phone_grey600_24dp"
+                                android:drawablePadding="10dp"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/phone"
+                                android:inputType="number"
+                                android:maxLength="13"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <!--                        <View-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="1dp"-->
+                            <!--                            android:background="@color/yellow"-->
+                            <!--                            android:layout_marginTop="5dp"/>-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/address_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/phone_layout"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:boxCornerRadiusBottomEnd="50dp"
+                            app:boxCornerRadiusBottomStart="50dp"
+                            app:boxCornerRadiusTopEnd="50dp"
+                            app:boxCornerRadiusTopStart="50dp">
+
+                            <EditText
+                                android:id="@+id/et_address"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableLeft="@mipmap/ic_map_marker_grey600_24dp"
+                                android:drawablePadding="10dp"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:gravity="left"
+                                android:hint="@string/address"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <!--                        <View-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="1dp"-->
+                            <!--                            android:background="@color/yellow"-->
+                            <!--                            android:layout_marginTop="5dp"/>-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/city_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/address_layout"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:boxCornerRadiusBottomEnd="50dp"
+                            app:boxCornerRadiusBottomStart="50dp"
+                            app:boxCornerRadiusTopEnd="50dp"
+                            app:boxCornerRadiusTopStart="50dp">
+
+                            <EditText
+                                android:id="@+id/et_city"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:drawableLeft="@mipmap/ic_map_marker_grey600_24dp"
+                                android:drawablePadding="10dp"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/city"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <!--                        <View-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="1dp"-->
+                            <!--                            android:background="@color/yellow"-->
+                            <!--                            android:layout_marginTop="5dp"/>-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/et_country_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/city_layout"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:boxCornerRadiusBottomEnd="50dp"
+                            app:boxCornerRadiusBottomStart="50dp"
+                            app:boxCornerRadiusTopEnd="50dp"
+                            app:boxCornerRadiusTopStart="50dp">
+
+                            <EditText
+                                android:id="@+id/tv_country"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableLeft="@mipmap/ic_map_marker_grey600_24dp"
+                                android:drawablePadding="10dp"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:hint="@string/country"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <!--                        <View-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="1dp"-->
+                            <!--                            android:background="@color/yellow"-->
+                            <!--                            android:layout_marginTop="5dp"/>-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/zipcode_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/et_country_layout"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:boxCornerRadiusBottomEnd="50dp"
+                            app:boxCornerRadiusBottomStart="50dp"
+                            app:boxCornerRadiusTopEnd="50dp"
+                            app:boxCornerRadiusTopStart="50dp">
+
+                            <EditText
+                                android:id="@+id/et_zipcode"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableLeft="@mipmap/ic_xml_grey600_24dp"
+                                android:drawablePadding="10dp"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/zipcode"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <!--                        <View-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="1dp"-->
+                            <!--                            android:background="@color/yellow"-->
+                            <!--                            android:layout_marginTop="5dp"/>-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/nationality_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zipcode_layout"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            app:boxCornerRadiusBottomEnd="50dp"
+                            app:boxCornerRadiusBottomStart="50dp"
+                            app:boxCornerRadiusTopEnd="50dp"
+                            app:boxCornerRadiusTopStart="50dp">
+
+                            <EditText
+                                android:id="@+id/et_nation"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:drawableLeft="@mipmap/ic_flag_variant_outline_grey600_24dp"
+                                android:drawablePadding="10dp"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/nationality"
+                                android:maxLength="20"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <!--                        <View-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="1dp"-->
+                            <!--                            android:background="@color/yellow"-->
+                            <!--                            android:layout_marginTop="5dp"/>-->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <EditText
+                            android:id="@+id/et_dob"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nationality_layout"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@null"
+                            android:drawableLeft="@mipmap/ic_calendar_blank_grey600_24dp"
+                            android:drawablePadding="10dp"
+                            android:editable="true"
+                            android:focusable="false"
+                            android:hint="@string/dob"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/et_dob"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:id="@+id/tv_showgender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/gender"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toRightOf="@+id/tv_showgender"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/radioGroup"
+                                android:layout_toEndOf="@+id/tv_showgender"
+                                android:layout_toRightOf="@+id/tv_showgender"
+                                android:checked="true"
+                                android:text="@string/male"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="@string/female"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/other"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="other"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/tv_subject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_showgender"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/Subject"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/subject_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_showgender"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/tv_subject"
+                            android:background="@drawable/spiner_border"
+                            android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"
+                            android:drawableTint="@color/black"
+                            android:text="@string/Selectsubject"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_classes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/subject_spinner"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/classes"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <include
+                            android:id="@+id/class_spinner"
+                            layout="@layout/spinnerlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/subject_spinner"
+                            android:layout_alignLeft="@+id/subject_spinner"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/tv_classes"
+                            android:background="@drawable/spiner_border"
+                            android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"
+                            android:drawableTint="@color/black"
+                            android:text="@string/Selectclass"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_teach_classes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/class_spinner"
+                            android:layout_alignLeft="@+id/tv_show_signup"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/classes"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/class_teach_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/class_spinner"
+                            android:layout_alignLeft="@+id/class_spinner"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/tv_teach_classes"
+                            android:background="@drawable/spiner_border"
+                            android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"
+                            android:drawableTint="@color/black"
+                            android:text="@string/Selectclass"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:id="@+id/btn_submit"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/class_teach_spinner"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bothsidecorner"
+                            android:text="@string/submit"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/rel_third"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/PersonalInformation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+
+            <!--        <ScrollView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+
+            <!--            android:id="@+id/scrollView">-->
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent">-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv_show_signup"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/logobg"-->
+            <!--                    android:text="@string/update"-->
+            <!--                    android:textAllCaps="true"-->
+            <!--                    android:layout_marginLeft="30dp"-->
+            <!--                    android:textSize="18dp"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:layout_marginTop="20dp"/>-->
+            <!--                <View-->
+            <!--                    android:layout_width="100dp"-->
+            <!--                    android:layout_height="1dp"-->
+            <!--                    android:background="@color/red"-->
+            <!--                    android:layout_toRightOf="@+id/tv_show_signup"-->
+            <!--                    android:layout_below="@+id/logobg"-->
+            <!--                    android:layout_marginLeft="20dp"-->
+            <!--                    android:layout_marginTop="30dp"/>-->
+            <!--                <android.support.design.widget.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                     android:layout_below="@+id/tv_show_signup"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:id="@+id/fullname_layout"-->
+            <!--                    >-->
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/et_fullname"-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawableRight="@mipmap/ic_account_outline_grey600_24dp"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:hint="@string/fullname"-->
+            <!--                        android:textSize="15dp"-->
+            <!--                        android:background="@null"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:focusableInTouchMode="true"-->
+            <!--                        android:inputType="text"-->
+            <!--                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"-->
+            <!--                        android:maxLength="30"-->
+            <!--                        />-->
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:background="@color/yellow"-->
+            <!--                        android:layout_marginTop="5dp"/>-->
+            <!--                </android.support.design.widget.TextInputLayout>-->
+            <!--                <android.support.design.widget.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/fullname_layout"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:id="@+id/phone_layout"-->
+            <!--                    >-->
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/et_phone"-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawableRight="@mipmap/ic_phone_grey600_24dp"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:hint="@string/phone"-->
+            <!--                        android:textSize="15dp"-->
+            <!--                        android:background="@null"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:focusableInTouchMode="true"-->
+            <!--                        android:inputType="number"-->
+            <!--                        android:maxLength="13"-->
+            <!--                        android:digits="0123456789"-->
+            <!--                        />-->
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:background="@color/yellow"-->
+            <!--                        android:layout_marginTop="5dp"/>-->
+            <!--                </android.support.design.widget.TextInputLayout>-->
+            <!--                <android.support.design.widget.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/phone_layout"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:id="@+id/address_layout"-->
+            <!--                    >-->
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/et_address"-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawableRight="@mipmap/ic_map_marker_grey600_24dp"-->
+            <!--                        android:hint="@string/address"-->
+            <!--                        android:textSize="15dp"-->
+            <!--                        android:background="@null"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:editable="false"-->
+            <!--                        android:focusable="false"-->
+            <!--                        android:gravity="left"-->
+            <!--                        />-->
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:background="@color/yellow"-->
+            <!--                        android:layout_marginTop="5dp"/>-->
+            <!--                </android.support.design.widget.TextInputLayout>-->
+            <!--                <android.support.design.widget.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/address_layout"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:id="@+id/city_layout"-->
+            <!--                    >-->
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/et_city"-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawableRight="@mipmap/ic_map_marker_grey600_24dp"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:hint="@string/city"-->
+            <!--                        android:textSize="15dp"-->
+            <!--                        android:background="@null"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:focusableInTouchMode="true"-->
+            <!--                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"-->
+            <!--                        />-->
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:background="@color/yellow"-->
+            <!--                        android:layout_marginTop="5dp"/>-->
+            <!--                </android.support.design.widget.TextInputLayout>-->
+            <!--                <android.support.design.widget.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/city_layout"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:id="@+id/et_country_layout"-->
+            <!--                    >-->
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/tv_country"-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawableRight="@mipmap/ic_map_marker_grey600_24dp"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:hint="@string/country"-->
+            <!--                        android:textSize="15dp"-->
+            <!--                        android:background="@null"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:editable="false"-->
+            <!--                        android:focusable="false"-->
+            <!--                        />-->
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:background="@color/yellow"-->
+            <!--                        android:layout_marginTop="5dp"/>-->
+            <!--                </android.support.design.widget.TextInputLayout>-->
+            <!--                <android.support.design.widget.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/et_country_layout"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:id="@+id/zipcode_layout"-->
+            <!--                    >-->
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/et_zipcode"-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawableRight="@mipmap/ic_xml_grey600_24dp"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:hint="@string/zipcode"-->
+            <!--                        android:textSize="15dp"-->
+            <!--                        android:background="@null"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:focusableInTouchMode="true"-->
+            <!--                        android:inputType="number"-->
+            <!--                        android:maxLength="10"-->
+            <!--                        />-->
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:background="@color/yellow"-->
+            <!--                        android:layout_marginTop="5dp"/>-->
+            <!--                </android.support.design.widget.TextInputLayout>-->
+            <!--                <android.support.design.widget.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/zipcode_layout"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:id="@+id/nationality_layout"-->
+            <!--                    >-->
+            <!--                    <EditText-->
+            <!--                        android:id="@+id/et_nation"-->
+            <!--                        android:layout_width="fill_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawableRight="@mipmap/ic_flag_variant_outline_grey600_24dp"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:hint="@string/nationality"-->
+            <!--                        android:textSize="15dp"-->
+            <!--                        android:background="@null"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:focusableInTouchMode="true"-->
+            <!--                        android:maxLength="20"-->
+            <!--                        />-->
+            <!--                    <View-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:background="@color/yellow"-->
+            <!--                        android:layout_marginTop="5dp"/>-->
+            <!--                </android.support.design.widget.TextInputLayout>-->
+            <!--                <EditText-->
+            <!--                    android:id="@+id/et_dob"-->
+            <!--                    android:layout_width="fill_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:drawableRight="@mipmap/ic_calendar_blank_grey600_24dp"-->
+            <!--                    android:singleLine="true"-->
+            <!--                    android:hint="@string/dob"-->
+            <!--                    android:textSize="15dp"-->
+            <!--                    android:background="@null"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:editable="true"-->
+            <!--                    android:focusable="false"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_below="@+id/nationality_layout"-->
+            <!--                    />-->
+            <!--                <View-->
+            <!--                    android:id="@+id/view1"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="1dp"-->
+            <!--                    android:background="@color/yellow"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_below="@+id/et_dob"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:layout_marginRight="30dp"/>-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv_showgender"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="@string/gender"-->
+            <!--                    android:layout_below="@+id/view1"-->
+            <!--                    android:layout_marginLeft="30dp"-->
+            <!--                    android:layout_marginRight="20dp"-->
+            <!--                    android:layout_marginTop="15dp"-->
+            <!--                    android:textColor="@color/black"/>-->
+            <!--                <RadioGroup-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/tv_showgender"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:id="@+id/radioGroup"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_marginLeft="30dp">-->
+            <!--                    <RadioButton-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:id="@+id/male"-->
+            <!--                        android:layout_below="@+id/radioGroup"-->
+            <!--                        android:layout_toRightOf="@+id/tv_showgender"-->
+            <!--                        android:layout_toEndOf="@+id/tv_showgender"-->
+            <!--                        android:text="@string/male"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:checked="true"-->
+            <!--                        />-->
+            <!--                    <RadioButton-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="20dp"-->
+            <!--                        android:id="@+id/female"-->
+            <!--                        android:text="@string/female"-->
+            <!--                        android:textColor="@color/black"/>-->
+            <!--                    <RadioButton-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="20dp"-->
+            <!--                        android:id="@+id/other"-->
+            <!--                        android:text="other"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:visibility="gone"/>-->
+            <!--                </RadioGroup>-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv_subject"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/radioGroup"-->
+            <!--                    android:text="@string/Subject"-->
+            <!--                    android:layout_marginTop="30dp"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="14dp"-->
+            <!--                    />-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/subject_spinner"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/radioGroup"-->
+            <!--                    android:layout_toRightOf="@+id/tv_subject"-->
+            <!--                    android:layout_marginLeft="50dp"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_marginRight="20dp"-->
+            <!--                    android:text="@string/Selectsubject"-->
+            <!--                    android:textAlignment="center"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:background="@drawable/spiner_border"-->
+            <!--                    android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"-->
+            <!--                    android:drawableTint="@color/yellow"-->
+            <!--                    />-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv_classes"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/subject_spinner"-->
+            <!--                    android:text="@string/classes"-->
+            <!--                    android:layout_marginTop="30dp"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="14dp"-->
+            <!--                    />-->
+            <!--                <include-->
+            <!--                    layout="@layout/spinnerlayout"-->
+            <!--                    android:id="@+id/class_spinner"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/subject_spinner"-->
+            <!--                    android:layout_toRightOf="@+id/tv_classes"-->
+            <!--                    android:layout_alignLeft="@+id/subject_spinner"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_marginRight="20dp"-->
+            <!--                    android:text="@string/Selectclass"-->
+            <!--                    android:textAlignment="center"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:background="@drawable/spiner_border"-->
+            <!--                    android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"-->
+            <!--                    android:drawableTint="@color/yellow"-->
+            <!--                  />-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv_teach_classes"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/class_spinner"-->
+            <!--                    android:text="@string/classes"-->
+            <!--                    android:layout_marginTop="30dp"-->
+            <!--                    android:layout_alignLeft="@+id/tv_show_signup"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="14dp"-->
+            <!--                    />-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/class_teach_spinner"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/class_spinner"-->
+            <!--                    android:layout_toRightOf="@+id/tv_teach_classes"-->
+            <!--                    android:layout_alignLeft="@+id/class_spinner"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_marginRight="20dp"-->
+            <!--                    android:text="@string/Selectclass"-->
+            <!--                    android:textAlignment="center"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:background="@drawable/spiner_border"-->
+            <!--                    android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"-->
+            <!--                    android:drawableTint="@color/yellow"-->
+            <!--                 />-->
+            <!--                <Button-->
+            <!--                    android:id="@+id/btn_submit"-->
+            <!--                    android:layout_width="160dp"-->
+            <!--                    android:layout_height="35dp"-->
+            <!--                    android:layout_below="@+id/class_teach_spinner"-->
+            <!--                    android:layout_centerHorizontal="true"-->
+            <!--                    android:background="@color/red"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:text="@string/submit"-->
+            <!--                    android:textAllCaps="true"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_marginBottom="10dp"/>-->
+            <!--            </RelativeLayout>-->
+            <!--        </ScrollView>-->
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

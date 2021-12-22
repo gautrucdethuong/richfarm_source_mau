@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:id="@+id/leftdrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userprofile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="8dp" />
+
+        <TextView
+            android:id="@+id/tvh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userprofile"
+            android:layout_alignLeft="@+id/userprofile"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/blue_circle_in_image" />
+
+        <ImageView
+            android:id="@+id/im_active"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/tvh"
+            android:layout_alignLeft="@+id/tvh"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/tvh"
+            android:src="@mipmap/ic_circle_grey600_24dp"
+            android:tint="@color/green"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvh"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/im_active"
+            android:text="Active"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/im_inactive"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/tvh"
+            android:layout_alignLeft="@+id/tvh"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/tvh"
+            android:src="@mipmap/ic_circle_grey600_24dp"
+            android:tint="@color/oreange"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_inactive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvh"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/im_inactive"
+            android:text="InActive"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fab"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/grey_roundedcorner"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:text="Sign In"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/leftdrawer"
+        android:background="#7F5CDE"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+
+            android:id="@+id/account"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/Profile"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/subjects"
+            android:icon="@drawable/ic_subjects"
+            android:title="@string/Subject"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/classes"
+            android:icon="@drawable/ic_class"
+            android:title="@string/classes"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/jobapplied"
+            android:icon="@drawable/ic_sug_teach"
+            android:title="@string/Suggestedteachers"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/studyplace"
+            android:icon="@drawable/ic_study_place"
+            android:title="@string/StudyPlaces"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/Chat"
+            android:checked="false"
+            />
+
+        <item
+            android:id="@+id/transaction"
+            android:icon="@drawable/ic_transaction"
+            android:title="My Transaction"
+            android:checked="false"
+            />
+
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/Settings"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/Logout"
+            android:checked="false"
+            />
+    </group>
+</menu>

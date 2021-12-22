@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/rel_first"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="10dp"-->
+
+<!--            >-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/top_img"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:layout_marginLeft="-260dp"-->
+<!--                android:layout_marginTop="-45dp"-->
+<!--                android:layout_marginRight="100dp"-->
+<!--                android:src="@drawable/top_img" />-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_heading"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_alignBottom="@id/top_img"-->
+<!--                android:text="Withdrawal Amount"-->
+<!--                android:layout_marginBottom="100dp"-->
+<!--                android:textColor="#000"-->
+<!--                android:textSize="20dp"-->
+<!--               />-->
+
+<!--        </RelativeLayout>-->
+
+
+
+
+
+
+
+
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+           android:layout_marginBottom="15dp"
+
+           >
+
+           <ImageView
+               android:id="@+id/close"
+               android:layout_width="30dp"
+               android:layout_height="25dp"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="5dp"
+               android:src="@mipmap/ic_close_circle_grey600_24dp" />
+
+
+           <TextView
+               android:id="@+id/text"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/tv_fee"
+               android:layout_marginLeft="20dp"
+               android:layout_marginTop="40dp"
+               android:text="Enter Withdrawal Amount"
+               android:textColor="@color/black"
+               android:textSize="16dp" />
+
+
+           <EditText
+               android:id="@+id/withdrawal_amount"
+               android:layout_width="match_parent"
+               android:layout_height="36dp"
+               android:background="@drawable/background_white"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="20dp"
+               android:layout_marginTop="20dp"
+               android:inputType="number"
+               android:layout_below="@id/text"
+               android:gravity="left|center_vertical"
+               android:hint="Enter withdrawal amount"
+               android:paddingLeft="10dp"
+               />
+
+           <Button
+               android:id="@+id/btn"
+               android:layout_width="150dp"
+               android:layout_height="40dp"
+               android:layout_below="@+id/withdrawal_amount"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/bothsidecorner"
+               android:text="withdraw"
+               android:layout_marginBottom="10dp"
+               android:layout_centerHorizontal="true"
+               android:textAllCaps="false"
+               android:textColor="@color/white" />
+
+
+
+
+       </RelativeLayout>
+    </RelativeLayout>
+</layout>

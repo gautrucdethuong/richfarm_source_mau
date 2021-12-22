@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/chat_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/top_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="-260dp"
+                        android:layout_marginTop="-55dp"
+                        android:layout_marginRight="100dp"
+                        android:src="@drawable/top_img" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/sender_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/im_back"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/noimage"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="3dp" />
+
+                    <ImageView
+                        android:id="@+id/im_back"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/ic_arrow_left_white_24dp"
+                        android:tint="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/tv_sendername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/im_back"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/sender_img"
+                        android:text="dsffffffffff"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/im_option"
+                        android:layout_width="40dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/ic_dots_vertical_white_24dp"
+                        android:tint="@color/black"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/card"
+                android:layout_below="@+id/rel"
+                android:layout_marginTop="-80dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:id="@+id/tv_nomsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bothsidecorner"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="No Message"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginTop="5dp"
+
+                    android:layout_marginBottom="5dp">
+
+                    <ListView
+                        android:id="@+id/chat_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"
+                        android:fastScrollEnabled="true" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/detail_corners"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="8dp"
+                app:cardPreventCornerOverlap="true">
+
+
+                <RelativeLayout
+                    android:id="@+id/msg_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/chat_edit_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/enter_chat1"
+                        android:background="@drawable/recangle_shape__white_50"
+                        android:hint="Type a message"
+                        android:maxLines="10"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/enter_chat1"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/chat_send" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

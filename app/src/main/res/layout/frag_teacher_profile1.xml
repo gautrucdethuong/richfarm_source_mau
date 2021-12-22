@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/teacher_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_first"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:liteMode="true" />
+
+            <ImageView
+                android:id="@+id/top_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginLeft="-260dp"
+                android:layout_marginTop="-55dp"
+                android:layout_marginRight="100dp"
+                android:src="@drawable/top_img" />
+
+            <ImageView
+                android:id="@+id/im_back"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/ic_arrow_left_white_24dp"
+                android:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/im_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginRight="-100dp"
+                android:layout_marginBottom="-8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_dark" />
+
+
+            <ImageView
+                android:id="@+id/im_bottom_light"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-80dp"
+                android:layout_marginRight="-100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_light" />
+
+
+        </RelativeLayout>
+
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/rel_first">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:collapsedTitleGravity="center"
+                    app:expandedTitleMarginBottom="60dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/profile"
+                        >
+
+
+
+
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_teacher_name"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:layout_marginRight="20dp"-->
+<!--                            android:layout_marginTop="90dp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text=""-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="18dp"-->
+<!--                            android:textStyle="bold" />-->
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white">
+
+                            <RelativeLayout
+                                android:id="@+id/currency_layout"
+                                android:layout_width="100dp"
+                                android:layout_height="70dp">
+
+                                <ImageView
+                                    android:id="@+id/im_currency"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="15dp"
+                                   />
+
+                                <TextView
+                                    android:id="@+id/tv_fees"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/im_currency"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:drawableTint="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:paddingTop="5dp"
+                                    android:text="$00/hr"
+                                    android:textColor="@color/black" />
+
+                                <View
+                                    android:id="@+id/view1"
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/colorPrimary" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/appoint_layout"
+                                android:layout_width="150dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true">
+
+                                <ImageView
+                                    android:id="@+id/im_appointment"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/teacherappoint"
+                                    android:tint="@color/colorPrimary" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/im_appointment"
+                                    android:layout_centerHorizontal="true"
+                                    android:drawableTint="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:paddingTop="5dp"
+                                    android:text="Take Appointment"
+                                    android:textColor="@color/black" />
+
+                                <View
+                                    android:id="@+id/view2"
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/colorPrimary" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/chat_layout"
+                                android:layout_width="100dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:id="@+id/im_chat"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/teacherchat"
+                                    android:tint="@color/colorPrimary" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/im_chat"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:drawableTint="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:paddingTop="5dp"
+                                    android:text="Chat with me"
+                                    android:textColor="@color/black" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+<!--                    <android.support.v7.widget.Toolbar-->
+<!--                        android:id="@+id/toolbar"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:background="#99000000"-->
+<!--                        android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+<!--                        android:title="Collapsing Toolbar"-->
+<!--                        app:layout_collapseMode="pin">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/im_back"-->
+<!--                            android:layout_width="30dp"-->
+<!--                            android:layout_height="30dp"-->
+<!--                            android:src="@mipmap/ic_arrow_left_white_24dp"-->
+<!--                            android:tint="@color/yellow"-->
+
+<!--                            />-->
+
+<!--                        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                            android:id="@+id/toolbar_img"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginLeft="20dp"-->
+<!--                            android:visibility="gone"-->
+<!--                            app:civ_border_color="@color/yellow"-->
+<!--                            app:civ_border_width="2dp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/toolbar_drname"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="17dp"-->
+<!--                            android:visibility="gone" />-->
+<!--                    </android.support.v7.widget.Toolbar>-->
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/currency_layout"
+                    android:layout_gravity="bottom"
+                    app:tabBackground="@drawable/appoint_tab_bg"
+                    app:tabIndicatorColor="@color/transparent"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    android:layout_marginTop="5dp"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/black"></com.google.android.material.tabs.TabLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tab_layout"
+                android:layout_margin="10dp"
+android:background="@mipmap/rectangle_background"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.viewpager.widget.ViewPager>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/cir_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rel_first">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im_profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+
+            android:src="@drawable/noimage"
+            android:layout_marginBottom="10dp"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="3dp" />
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/im_quality"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--           android:layout_alignBottom="@+id/im_profile"-->
+<!--            android:layout_toRightOf="@id/im_profile"-->
+<!--            android:src="@mipmap/quality"-->
+<!--            android:tint="@color/colorPrimary"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_quality"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignBottom="@+id/im_profile"-->
+<!--            android:layout_marginRight="10dp"-->
+
+<!--            android:layout_toRightOf="@+id/im_quality"-->
+<!--            android:paddingLeft="5dp" />-->
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rating"
+            android:layout_width="130dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignBottom="@+id/im_profile"
+            android:layout_toLeftOf="@id/im_profile"
+            android:clickable="false" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>
+
+

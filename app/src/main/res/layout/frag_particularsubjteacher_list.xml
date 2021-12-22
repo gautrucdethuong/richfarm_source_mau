@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white"
+    android:id="@+id/teacher_list"
+   >
+    <include layout="@layout/back_header"
+             android:id="@+id/header"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+        <TextView
+            android:id="@+id/tv_noclass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/noteacheravailable"
+            android:gravity="center"
+            android:textColor="@color/yellow"
+            android:visibility="gone"
+            android:drawableTop="@mipmap/ic_alert_grey600_24dp"
+            android:drawableTint="@color/yellow"
+            />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_teachers"
+            android:layout_marginBottom="10dp">
+
+        </ListView>
+    </RelativeLayout>
+</RelativeLayout>
+    </layout>

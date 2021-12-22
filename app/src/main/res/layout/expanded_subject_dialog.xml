@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rel_first"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/top_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginLeft="-260dp"
+                android:layout_marginTop="-45dp"
+                android:layout_marginRight="100dp"
+                android:src="@drawable/top_img" />
+
+
+            <TextView
+                android:id="@+id/tv_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@id/top_img"
+                android:text="Choose Subjects"
+                android:layout_marginBottom="100dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/im_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginRight="-100dp"
+                android:layout_marginBottom="-8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_dark" />
+
+
+            <ImageView
+                android:id="@+id/im_bottom_light"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-80dp"
+                android:layout_marginRight="-100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_light" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_close_circle_grey600_24dp" />
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/rel_first"
+           android:layout_marginTop="-60dp"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginBottom="15dp"
+           android:background="@mipmap/rectangle_background"
+           >
+
+
+    <ExpandableListView
+            android:id="@+id/expanded_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_submit"
+
+            android:groupIndicator="@null"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+
+            />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bothsidecorner"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="17dp"
+            android:visibility="invisible" />
+       </RelativeLayout>
+    </RelativeLayout>
+</layout>

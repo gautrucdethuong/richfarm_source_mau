@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/drawer_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow">
+        <ImageView
+            android:id="@+id/im_drawer"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_menu_black_24dp"
+
+            android:paddingTop="5dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <ImageView
+            android:id="@+id/im_triangle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/arrow_left"
+            android:tint="@color/black"
+            android:layout_toRightOf="@+id/im_drawer"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:text="Home"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/im_triangle"
+            android:textSize="16dp"
+            android:background="@drawable/black_rounded_corner"
+            android:gravity="center"
+            android:layout_marginLeft="-5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            />
+    </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/poorwhite"
+        android:clickable="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+
+            <ImageView
+                android:id="@+id/top_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/welcome_text"
+                android:layout_marginLeft="-280dp"
+                android:layout_marginRight="55dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/top_img" />
+            <ImageView
+                android:id="@+id/im_back"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_arrow_left_white_24dp"
+                android:tint="@color/black"
+                android:layout_alignParentLeft="true"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_layout"
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                app:boxCornerRadiusTopEnd="50dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomStart="50dp"
+                app:boxCornerRadiusBottomEnd="50dp"
+                app:boxCornerRadiusTopStart="50dp"
+                android:layout_height="wrap_content"
+              android:layout_alignBottom="@id/top_img"
+                android:layout_alignLeft="@+id/tv_show_signin"
+               android:layout_marginBottom="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableRight="@mipmap/sr"
+                    android:drawablePadding="10dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:hint="Search by Subjects"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingLeft="40dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="1dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:background="@color/yellow" />-->
+            </com.google.android.material.textfield.TextInputLayout>
+<!--            <EditText-->
+<!--                android:id="@+id/et_search"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:background="@drawable/bothsidecornerwhite"-->
+<!--                android:drawableRight="@android:drawable/ic_menu_search"-->
+<!--                android:hint="Search by Subjects"-->
+<!--                android:imeOptions="actionSearch"-->
+<!--                android:inputType="text"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginRight="50dp"-->
+<!--                android:layout_marginTop="-50dp"-->
+<!--                android:layout_alignBottom="@id/top_img"-->
+<!--                android:maxLines="chat_bubble"-->
+<!--                android:paddingLeft="10dp"-->
+<!--                android:singleLine="true"-->
+<!--                android:textSize="15dp" />-->
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_below="@id/header"
+            android:text=""
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="22dp"/>
+
+
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/im_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginRight="-100dp"
+                android:layout_marginBottom="-8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_dark" />
+
+
+            <ImageView
+                android:id="@+id/im_bottom_light"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-80dp"
+                android:layout_marginRight="-100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_light" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/rectangle_background"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/tv_heading">
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/et_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:background="@drawable/home_bg">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et_search"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="30dp"-->
+<!--                    android:layout_marginRight="30dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:background="@drawable/rund_corner_edittext"-->
+<!--                    android:drawableRight="@android:drawable/ic_menu_search"-->
+<!--                    android:hint="Search by Subjects"-->
+<!--                    android:imeOptions="actionSearch"-->
+<!--                    android:inputType="text"-->
+<!--                    android:maxLines="chat_bubble"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textSize="15dp" />-->
+<!--            </RelativeLayout>-->
+
+            <GridView
+                android:id="@+id/gv_subjects"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/im_ads"
+                android:layout_marginTop="5dp"
+                android:numColumns="2"></GridView>
+
+            <ImageView
+                android:id="@+id/im_ads"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

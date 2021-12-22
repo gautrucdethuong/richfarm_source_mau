@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/applyjob"
+       >
+        <include layout="@layout/drawer_header"
+            android:id="@+id/header"/>
+        <TextView
+            android:id="@+id/tv_noclass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="No Applied Job !"
+            android:gravity="center"
+            android:textColor="@color/yellow"
+            android:visibility="gone"
+            android:drawableTop="@mipmap/ic_alert_grey600_24dp"
+            android:drawableTint="@color/yellow"
+            />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycleview"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_below="@+id/header"
+            android:layout_above="@+id/im_ads"
+            android:layout_marginBottom="5dp">
+        </ListView>
+        <ImageView
+            android:id="@+id/im_ads"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            />
+    </RelativeLayout>
+</layout>

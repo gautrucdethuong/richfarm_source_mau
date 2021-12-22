@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<fragment android:id="@+id/mapdialog"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_marginTop="5dp"
+   />
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mapdialog"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="Ok"
+        android:textSize="18dp"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+</layout>

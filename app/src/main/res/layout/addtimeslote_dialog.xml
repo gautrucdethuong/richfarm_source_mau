@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/time_slot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_first"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/top_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginLeft="-260dp"
+                android:layout_marginTop="-45dp"
+                android:layout_marginRight="100dp"
+                android:src="@drawable/top_img" />
+
+
+            <ImageView
+                android:id="@+id/im_back"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@mipmap/ic_arrow_left_white_24dp"
+                android:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="fdsgf"
+                style="@style/fontRegular"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Next"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/im_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginRight="-100dp"
+                android:layout_marginBottom="-8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_dark" />
+
+
+            <ImageView
+                android:id="@+id/im_bottom_light"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-80dp"
+                android:layout_marginRight="-100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_light" />
+
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel_first"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="-60dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/rectangle_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:tag="Mon"
+                    android:text="Mon"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/monday"
+                    android:layout_centerHorizontal="true"
+                    android:tag="Tue"
+                    android:text="Tue"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/saturday"
+                    android:layout_alignLeft="@+id/saturday"
+                    android:layout_alignTop="@+id/tuesday"
+                    android:tag="Wed"
+                    android:text="Wed"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/thusday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/monday"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:tag="Thu"
+                    android:text="Thu"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tuesday"
+                    android:layout_alignLeft="@+id/tuesday"
+                    android:layout_alignTop="@+id/thusday"
+                    android:tag="Fri"
+                    android:text="Fri"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/friday"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginRight="26dp"
+                    android:tag="Sat"
+                    android:text="Sat"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/friday"
+                    android:layout_alignStart="@+id/friday"
+                    android:layout_alignLeft="@+id/friday"
+                    android:layout_marginTop="27dp"
+                    android:tag="Sun"
+                    android:text="Sun"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/sunday"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Morning"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_morning"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="From"
+                    android:textColor="@color/black" />
+
+                <include
+                    android:id="@+id/from_spinner"
+                    layout="@layout/spinnerlayoutmornig"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tv_morning"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/tv_from" />
+
+                <TextView
+                    android:id="@+id/tv_afternoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/from_spinner"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Afternoon"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_afrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_afternoon"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="From"
+                    android:textColor="@color/black" />
+
+                <include
+                    android:id="@+id/afrom_spinner"
+                    layout="@layout/spinnerlayouttwelve"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tv_afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/tv_afrom" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_afrom"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/ato_spinner"
+                    android:layout_toLeftOf="@+id/ato_spinner"
+                    android:text="To"
+                    android:textColor="@color/black" />
+
+                <include
+                    android:id="@+id/ato_spinner"
+                    layout="@layout/spinnerlayouttosix"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/afrom_spinner"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_from"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/to_spinner"
+                    android:layout_toLeftOf="@+id/to_spinner"
+                    android:text="To"
+                    android:textColor="@color/black" />
+
+                <include
+                    android:id="@+id/to_spinner"
+                    layout="@layout/spinnerlayouttomorning"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/from_spinner"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_evening"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/afrom_spinner"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Evening"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_efrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_evening"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="From"
+                    android:textColor="@color/black" />
+
+                <include
+                    android:id="@+id/efrom_spinner"
+                    layout="@layout/spineerlayoutfromsix"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tv_evening"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/tv_efrom" />
+
+                <include
+                    android:id="@+id/eto_spinner"
+                    layout="@layout/spineerlayouttolast"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/efrom_spinner"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_eto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_efrom"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/eto_spinner"
+                    android:layout_toLeftOf="@+id/eto_spinner"
+                    android:text="To"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/efrom_spinner"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bothsidecorner"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

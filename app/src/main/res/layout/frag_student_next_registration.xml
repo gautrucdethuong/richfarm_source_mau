@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/student_next_reg"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:id="@+id/rel_first"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/top_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginLeft="-260dp"
+                android:layout_marginTop="-45dp"
+                android:layout_marginRight="100dp"
+                android:src="@drawable/top_img" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@id/top_img"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/final_logo" />
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/im_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginRight="-100dp"
+                android:layout_marginBottom="-8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_dark" />
+
+
+            <ImageView
+                android:id="@+id/im_bottom_light"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-80dp"
+                android:layout_marginRight="-100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_light" />
+
+
+        </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rel_first">
+
+                <TextView
+                    android:id="@+id/tv_show_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/im_verify"
+                    android:text="@string/register"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"/>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/red"
+                    android:layout_toRightOf="@+id/tv_show_signup"
+                    android:layout_below="@+id/im_verify"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"/>
+                <TextView
+                    android:id="@+id/tv_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_show_signup"
+                    android:text="@string/Subject"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignLeft="@+id/tv_show_signup"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    />
+                <TextView
+                    android:id="@+id/subject_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_show_signup"
+                    android:layout_toRightOf="@+id/tv_subject"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/Selectsubject"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/spiner_border"
+                    android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                   />
+                <TextView
+                    android:id="@+id/tv_classes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subject_spinner"
+                    android:text="@string/classes"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignLeft="@+id/tv_show_signup"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    />
+                <include
+                    layout="@layout/spinnerlayout"
+                    android:id="@+id/class_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subject_spinner"
+                    android:layout_toRightOf="@+id/tv_classes"
+                    android:layout_alignLeft="@+id/subject_spinner"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/Selectclass"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/spiner_border"
+                    android:drawableRight="@mipmap/ic_menu_down_grey600_24dp"
+                    android:drawableTint="@color/yellow"/>
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="160dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/class_spinner"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bothsidecorner"
+                    android:textColor="@color/white"
+                    android:text="@string/register"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "354389077274",
+    "firebase_url": "https://eguru-a731a.firebaseio.com",
+    "project_id": "eguru-a731a",
+    "storage_bucket": "eguru-a731a.appspot.com"
+  },
+  "client": [
+    {
+
+
+      "client_info": {
+        "mobilesdk_app_id": "1:354389077274:android:e8fac115f4cd8b92c010a3",
+        "android_client_info": {
+          "package_name": "com.infowindtech.eguru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354389077274-6ba56c3hfijhakea8obji7o0pa8amhe2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADz5_kbY7n185PVqiEsFpCzNpUBiF4dzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+
+            {
+              "client_id": "354389077274-6ba56c3hfijhakea8obji7o0pa8amhe2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "354389077274-085rngo91squ1215e7hubalddspfnuic.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.EGuru"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

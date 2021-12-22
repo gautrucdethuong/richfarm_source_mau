@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="30dp"
+
+            android:layout_height="30dp"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_close_circle_grey600_24dp" />
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/close"-->
+<!--            android:fillViewport="true"-->
+<!--            >-->
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/close"
+            >
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/lv_subject"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bothsidecorner"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:visibility="gone" />
+
+
+        <ListView
+            android:id="@+id/lv_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+
+    </RelativeLayout>
+
+
+
+
+        <!--    </ScrollView>-->
+
+    </RelativeLayout>
+</layout>

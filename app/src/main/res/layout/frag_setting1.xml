@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/setting_frag"
+    android:clickable="true"
+    android:focusable="true"
+   >
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/rel_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/top_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="-260dp"
+                    android:layout_marginTop="-55dp"
+                    android:layout_marginRight="100dp"
+                    android:src="@drawable/top_img" />
+
+                <ImageView
+                    android:id="@+id/im_drawer"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="5dp"
+                    android:src="@mipmap/ic_menu_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/top_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Home"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/rel_first"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="-80dp"
+                android:layout_marginRight="-30dp"
+
+                >
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/background_cross" />
+
+
+            </RelativeLayout>
+
+
+            <!--            <android.support.v7.widget.CardView-->
+            <!--              android:id="@+id/card"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--             android:layout_below="@+id/rel_first"-->
+            <!--                android:layout_marginLeft="20dp"-->
+            <!--                android:layout_marginRight="20dp"-->
+            <!--                app:cardCornerRadius="4dp"-->
+            <!--                app:cardElevation="4dp"-->
+            <!--                app:cardPreventCornerOverlap="true"-->
+            <!--                app:cardUseCompatPadding="true"-->
+            <!--              >-->
+
+            <RelativeLayout
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_first"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/recangle_shape_blue">
+
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                   android:layout_marginBottom="40dp"
+                    android:padding="10dp"
+                    android:text="Priya Joshi"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+
+                    />
+
+
+
+
+            </RelativeLayout>
+            <!--            </android.support.v7.widget.CardView>-->
+
+            <RelativeLayout
+                android:id="@+id/profile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignTop="@id/card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-70dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/im_profile"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/noimage"
+                    app:civ_border_color="#bce7e5"
+                    app:civ_border_width="7dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/im_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginRight="-100dp"
+                android:layout_marginBottom="-8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_dark" />
+
+
+            <ImageView
+                android:id="@+id/im_bottom_light"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-80dp"
+                android:layout_marginRight="-100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bottom_img_light" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+<!--    -->
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/im_profile"-->
+<!--                    android:layout_width="90dp"-->
+<!--                    android:layout_height="90dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    app:civ_border_width="3dp"-->
+<!--                    app:civ_border_color="@color/white"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_name"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/im_profile"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginRight="20dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textAllCaps="true"/>-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel"
+                android:id="@+id/rel_personal_info">
+                <ImageView
+                    android:id="@+id/im_personalinfo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/edit_profile"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <TextView
+                    android:id="@+id/tv_personal_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im_personalinfo"
+                    android:text="Edit Profile"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignTop="@+id/im_personalinfo"/>
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/im_personalinfo"
+                    android:background="@color/red"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/rel_personal_info"
+               android:id="@+id/rel_change_pass"
+               >
+               <ImageView
+                   android:id="@+id/im_change_pass"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@mipmap/change_pass"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginLeft="20dp"
+
+                   />
+               <TextView
+                   android:id="@+id/tv_change_pass"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/im_change_pass"
+                   android:text="Change Password"
+                   android:textColor="@color/black"
+                   android:textSize="18dp"
+                   android:layout_marginLeft="30dp"
+                   android:layout_alignTop="@+id/im_change_pass"
+                   android:paddingBottom="5dp"/>
+<!--               <View-->
+<!--                   android:id="@+id/view3"-->
+<!--                   android:layout_width="match_parent"-->
+<!--                   android:layout_height="1dp"-->
+<!--                   android:layout_below="@+id/im_change_pass"-->
+<!--                   android:background="@color/red"-->
+<!--                   android:layout_marginTop="10dp"-->
+<!--                   android:layout_marginLeft="20dp"-->
+<!--                   android:layout_marginRight="20dp"-->
+<!--                 />-->
+           </RelativeLayout>
+<!--               <RelativeLayout-->
+<!--                   android:layout_width="match_parent"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:layout_below="@+id/rel_change_pass"-->
+<!--                   android:id="@+id/rel_language"-->
+<!--                   >-->
+<!--               <ImageView-->
+<!--                   android:id="@+id/im_language"-->
+<!--                   android:layout_width="30dp"-->
+<!--                   android:layout_height="30dp"-->
+<!--                   android:src="@mipmap/language"-->
+<!--                   android:layout_marginTop="20dp"-->
+<!--                   android:layout_marginLeft="20dp"-->
+
+<!--                   />-->
+
+<!--                   <TextView-->
+<!--                       android:id="@+id/tv_language"-->
+<!--                       android:layout_width="wrap_content"-->
+<!--                       android:layout_height="wrap_content"-->
+<!--                       android:layout_alignTop="@+id/im_language"-->
+<!--                       android:layout_marginLeft="30dp"-->
+<!--                       android:layout_toRightOf="@+id/im_language"-->
+<!--                       android:paddingBottom="5dp"-->
+<!--                       android:text="Language"-->
+<!--                       android:textColor="@color/black"-->
+<!--                       android:textSize="18dp" />-->
+
+<!--           </RelativeLayout>-->
+        </RelativeLayout>
+</RelativeLayout>
+</layout>
